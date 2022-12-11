@@ -158,7 +158,20 @@ if __name__ == '__main__':
     print(code)
     check(headers, id, code, PROXIES)
     res = createAccount(headers, id, PROXIES)
-    print(f'Organization ID: {res["orgnizationID"]}')
+    organizationID = res["orgnizationID"]
+    print(f'Organization ID: {organizationID}')
     sensitiveID = res["sensitiveID"]
     print(f'Sensitive ID: {sensitiveID}')
-    print(f'API Key: {createAPIKey(headers, sensitiveID, PROXIES)}')
+    apikey = createAPIKey(headers, sensitiveID, PROXIES)
+    print(f'API Key: {apikey}')
+    
+    print(f"""\
+Registeration Complete!
+-----------------------
+Email: {mail}
+Password: password
+Organization ID: {res["orgnizationID"]}
+API Key: {apikey}
+-----------------------
+Enjoy!
+""")
