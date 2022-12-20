@@ -1,3 +1,7 @@
+# 12/20/2020 openAI已经加了reCHAPTCHA验证，此脚本已无法使用。
+
+===
+
 # (半)自动注册openAI账号并获取API key脚本
 
 ![效果](imgs/result.png)
